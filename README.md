@@ -1,6 +1,14 @@
 # Checklist Debug
 
-[Target app](https://debug-checklist.matchthetarget.com/)
+## Target
+
+Starting from (almost) scratch, build this debugging checklist for yourself:
+
+[https://debug-checklist.matchthetarget.com/](https://debug-checklist.matchthetarget.com/)
+
+You could also build any other checklist that you use frequently.
+
+There are no specs or `rails grade` for this project.
 
 ## Standard Workflow
 
