@@ -1,4 +1,4 @@
-# Checklist Debug
+# Debugging Checklist
 
 ## Target
 
