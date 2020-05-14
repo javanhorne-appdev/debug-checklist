@@ -1,22 +1,105 @@
 <h1>
   Debugging checklist
 </h1>
+<div>
+<form action="/update_checklist" method="post">
 <ul>
+
+  <%if session.fetch(:project)=="on"%>
+    <del>
+  <%end%> 
+
   <li>
-    What project are you working on?
+
+    <label for="project">What project are you working on?</label>
+    <input name="project" type="hidden" value="0">
+    <input type="checkbox" name="project" id="project" 
+      <%if session.fetch(:project)=="on"%>
+        checked
+      <%end%>
+      >
   </li>
+
+  <%if session.fetch(:project)=="on"%>
+    </del>
+  <%end%> 
+
+  <%if session.fetch(:action1)=="on"%>
+    <del>
+  <%end%> 
   <li>
-    What action are you taking? (visiting <span style="color: white; background-color: #666;">/rock </span>
-  )</li>
-  <del>
+    <label for="action1">What action are you taking? (visiting <span style="color: white; background-color: #666;">/rock</span>)</label>
+    <input name="action1" type="hidden" value="0">
+    <input type="checkbox" name="action1" id="action1"  
+    <%if session.fetch(:action1)=="on"%>
+        checked
+    <%end%>
+      >
+  </li>
+  <%if session.fetch(:action1)=="on"%>
+    </del>
+  <%end%> 
+  
+  <%if session.fetch(:tried)=="on"%>
+    <del>
+  <%end%> 
     <li>
-      What have you tried so far?
+      <label for="tried">What have you tried so far?</label>
+      <input name="tried" type="hidden" value="0">
+      <input type="checkbox" name="tried" id="tried"
+      <%if session.fetch(:tried)=="on"%>
+        checked
+      <%end%>
+      >
     </li>
-  </del>
+
+  <%if session.fetch(:tried)=="on"%>
+    </del>
+  <%end%> 
+
+  <%if session.fetch(:expecting)=="on"%>
+    <del>
+  <%end%> 
   <li>
-    What is the behavior that you’re expecting?
+    <label for="expecting">What is the behavior that you’re expecting?</label>
+    <input name="expecting" type="hidden" value="0">
+    <input type="checkbox" name="expecting" id="expecting"
+      <%if session.fetch(:expecting)=="on"%>
+        checked
+      <%end%>
+      >
   </li>
+  <%if session.fetch(:expecting)=="on"%>
+    </del>
+  <%end%> 
+  <%if session.fetch(:experiencing)=="on"%>
+    <del>
+  <%end%> 
   <li>
-    What is the behavior that you’re experience instead?
+    <label for="experiencing">What is the behavior that you’re experiencing instead?</label>
+    <input name="experiencing" type="hidden" value="0">
+    <input type="checkbox" name="experiencing" id="experiencing"  
+      <%if session.fetch(:experiencing)=="on"%>
+        checked
+      <%end%>
+      >
   </li>
+  <%if session.fetch(:experiencing)=="on"%>
+    </del>
+  <%end%> 
 </ul>
+<button type="submit">Update Checklist</button>
+</form>
+</div>
+
+
+
+<hr>
+<a href="/reset_cookie">Reset all fields</a>
+<div>
+  <form action="/update_color" method="post">
+    <label for="color">Choose a Background Color</label>
+    <input type="color" name="color" id="color">
+    <button type="submit">Update background color</button>
+  </form>
+</div>

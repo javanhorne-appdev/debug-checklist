@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
   get("/", { :controller => "application", :action => "show_checklist" })
+  post("/update_color", { :controller =>"application", :action => "update_color"})
+  post("/update_checklist", { :controller =>"application", :action => "update_checklist"}) 
+  get("/reset_cookie", { :controller =>"application", :action => "reset"})
 
 
   # ======= Add your routes above here =============

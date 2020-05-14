@@ -14,7 +14,11 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
   </head>
 
-  <body>
+  <%if session.fetch(:color) != nil %>
+    <%bgcolor = session.fetch(:color)%>
+  <%end%>
+  
+  <body style="background-color: <%=bgcolor%>;">
     <%= yield %>
   </body>
 </html>
